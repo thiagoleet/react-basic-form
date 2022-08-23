@@ -20,7 +20,7 @@ const SimpleInput = (props) => {
     valueChangeHandler: emailChangedHandler,
     inputBlurHandler: emailInputBlurHandler,
     reset: resetEmailInput,
-  } = useInput((value) => value.trim() !== "" && emailIsValid(enteredEmail));
+  } = useInput((value) => value.trim() !== "" && emailIsValid(value));
 
   let formIsValid = false;
   if (enteredNameIsValid && enteredEmailIsValid) {
